@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Marsela's small, focused build log for shipping ideas in public." />
+    <title>Marsela's Build Log</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <nav class="topbar" aria-label="Primary navigation">
+        <a class="wordmark" href="#top" aria-label="Marsela's Build Log home">
+          <span class="wordmark-mark" aria-hidden="true">M</span>
+          <span>Marsela / build log</span>
+        </a>
+        <a class="topbar-link" href="#log">Open the log <span aria-hidden="true">↘</span></a>
+      </nav>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Small loops, shipped often</p>
+            <h1 id="hero-title">Make the next idea <em>visible.</em></h1>
+            <p class="hero-intro">A calm little workspace for Marsela's daily experiments on Monad, from the first rough prompt to the moment a build is ready to share.</p>
+            <a class="primary-link" href="#log">Add today's note <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-art" aria-label="A visual showing a build moving from an idea to a shipped result" role="img">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orbit-core"><span>ship</span><strong>01</strong></div>
+            <div class="orbit-label label-idea">idea</div>
+            <div class="orbit-label label-build">build</div>
+            <div class="orbit-label label-share">share</div>
+          </div>
+        </section>
+
+        <section class="workspace" id="log" aria-labelledby="log-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">01 / today's workspace</p>
+              <h2 id="log-title">The build log</h2>
+            </div>
+            <p class="section-note">Keep the next step small enough to finish.</p>
+          </div>
+
+          <div class="workspace-layout">
+            <form class="log-form" id="log-form">
+              <label for="log-input">What moved forward today?</label>
+              <div class="input-row">
+                <input id="log-input" name="log-entry" type="text" maxlength="100" autocomplete="off" placeholder="e.g. polished the empty state" required />
+                <button type="submit">Add note <span aria-hidden="true">+</span></button>
+              </div>
+              <p class="form-hint">One honest sentence is enough.</p>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="log-list-wrap">
+              <div class="list-meta"><span id="entry-count">2 notes</span><span class="meta-rule" aria-hidden="true"></span><span>week 01</span></div>
+              <ol class="log-list" id="log-list">
+                <li><span class="entry-number">01</span><span>Read the Monad docs</span><time datetime="2026-07-17">today</time></li>
+                <li><span class="entry-number">02</span><span>Sketched a first contract</span><time datetime="2026-07-17">today</time></li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section class="principle" aria-labelledby="principle-title">
+          <div class="principle-marker">02</div>
+          <div>
+            <p class="eyebrow">A useful reminder</p>
+            <h2 id="principle-title">Progress has a shape.</h2>
+            <p>Describe the idea. Build one slice. Look at the result. Say what needs to change. Then do the next small thing.</p>
+          </div>
+          <div class="loop-line" aria-hidden="true"><span>describe</span><i></i><span>build</span><i></i><span>review</span><i></i><span>repeat</span></div>
+        </section>
+      </main>
+
+      <footer class="footer"><span>Built by Marsela</span><span>First app / 2026</span></footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
