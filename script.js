@@ -4,6 +4,15 @@ const list = document.querySelector("#log-list");
 const count = document.querySelector("#entry-count");
 const status = document.querySelector("#form-status");
 
+if (window.Lenis && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const lenis = new window.Lenis({ duration: 1.1, smoothWheel: true });
+  const animateScroll = (time) => {
+    lenis.raf(time);
+    window.requestAnimationFrame(animateScroll);
+  };
+  window.requestAnimationFrame(animateScroll);
+}
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const value = input.value.trim();
